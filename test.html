@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// push方法 将新元素添加到一个数组中,并返回数组的新长度值
+// pop方法 移除数组中的最后一个元素并返回该元素
+// 将制定的元素插入数组开始位置并返回该数组
+// unshift 将指定的元素插入数组开始位置并返回该数组 
+// unshift 将制定的元素插入数组开始位置并返回该数组 
+
+
+//  1.   push()、pop()、shift()、unshift()分别是什么功能? 
+// 答案： 
+/*push 方法 
+将新元素添加到一个数组中，并返回数组的新长度值。*/ 
+// var a=[1,2,3,4]; 
+// a.push(5);
+// console.log(a);  
+
+/*pop 方法 
+移除数组中的最后一个元素并返回该元素。*/ 
+// var a=[1,2,3,4]; 
+// a.pop();
+// console.log(a);
+/*shift 方法 
+移除数组中的第一个元素并返回该元素。*/ 
+// var a=[1,2]; 
+// alert(a.shift()); 
+/*unshift 方法 
+将指定的元素插入数组开始位置并返回该数组。*/
+// var a=[1,2,3,4]; 
+// a.unshift(0);
+// console.log(a);
+
+// 2.undefined和null的区别
+// null： Null类型，代表“空值”，代表一个空对象指针，使用typeof运算得到 “object”，所以你可以认为它是一个特殊的对象值。
+// null代表空值  undefined未定义
+// undefined： Undefined类型，当一个声明了一个变量未初始化时，得到的就是undefined。
+// 说人话：
+// undefined是访问一个未初始化的变量时返回的值，而null是访问一个尚未存在的对象时所返回的值。因此，可以把undefined看作
+// 是空的变量，而null看作是空的对象。  可以把undefined看做是空的变量 而null可以看做是空的对象 
+
+// 什么是window对象?什么是docuemnt对象?
+// document是window的一个对象属性,是显示与窗口或者框架的一个文档
+// 
+// 
+
+// 3. 什么是window对象?什么是document对象
+// 简单来说，document是window的一个对象属性,是显示于窗口或框架的一个文档
+// Window 对象表示浏览器中打开的窗口。
+// 如果文档包含框架（frame 或 iframe 标签），浏览器会为 HTML 文档创建一个 window 对象，并为每个框架创建一个额外的 window 对象。
+// 所有的全局函数和对象都属于Window 对象的属性和方法。
+// 说人话:
+// 1、window 指窗体。document指页面。document是window的一个子对象。
+// 2、用户不能改变 document.location(因为这是当前显示文档的位置)。
+// 但是,可以改变window.location (用其它文档取代当前文档) window .location本身也是一个对象,而document.location不是对象
+
+// 4.javascript代码中的'use strict'是什么意思？ 使用它的区别是什么？
+// 1.概述
+
+// 除了正常运行模式，ECMAscript 5添加了第二种运行模式："严格模式"（strict mode）。顾名思义，这种模式使得Javascript
+// 在更严格的条件下运行。
+
+ 
+
+// 2.为什么用严格模式
+
+// - 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
+
+// - 消除代码运行的一些不安全之处，保证代码运行的安全；
+
+// - 提高编译器效率，增加运行速度；
+
+// - 为未来新版本的Javascript做好铺垫。
+
+// "严格模式"体现了Javascript更合理、更安全、更严谨的发展方向，包括IE 10在内的主流浏览器，都已经支持它，许多大项目已经开始全面拥抱它。
+
+// 另一方面，同样的代码，在"严格模式"中，可能会有不一样的运行结果；一些在"正常模式"下可以运行的语句，在"严格模式"下将不能运行。掌握这些内容，有助于更细致深入地理解Javascript，让你变成一个更好的程序员。
+// 3.如何调用
+
+// 3.1针对单个脚本
+
+//       直接写入script
+// 　　　　"use strict";
+// 　　　　console.log("这是严格模式。");
+
+// 3.2针对单个函数
+
+// 复制代码
+// function strict(){
+// 　　　　"use strict";
+// 　　　　return "这是严格模式。";
+// 　　}
+// 　　function notStrict() {
+// 　　　　return "这是正常模式。";
+// 　　}
+
+// 4.语法与行为改变
+
+// 严格模式对Javascript的语法和行为，都做了一些改变。
+
+// 4.1 全局变量显式声明
+
+// 在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，全局变量必须显式声明。
+
+// 4.2 禁止this关键字指向全局对象
+// 因此，使用构造函数时，如果忘了加new，this不再指向全局对象，而是报错。
+
+// 4.3对象不能有重名的属性
+
+// 正常模式下，如果对象有多个重名属性，最后赋值的那个属性会覆盖前面的值。严格模式下，这属于语法错误。
+// 4.4函数不能有重名的参数
+
+// 正常模式下，如果函数有多个重名的参数，可以用arguments[i]读取。严格模式下，这属于语法错误。
+
+// 5.Ajax 解决浏览器缓存问题
+// Ajax 解决浏览器缓存问题 
+// Ajax能提高页面载入速度的主要原因是通过Ajax减少了重复数据的载入,也即在载入数据的同时将数据缓存到内存中,
+// Ajax能提高页面载入速度的主要原因是通过Ajax减少了重复数据的载入，也即在载入数据的同时将数据缓存到内存中，
+// 一旦数据被加载,只要没有刷新页面,这些数据就会一直被缓存在内存中,当提交的URL与历史的URL一致时,就不需要提交给服务器,
+// 一旦数据被加载，只要没有刷新页面，这些数据就会一直被缓存在内存中，当提交的URL与历史的URL一致时，就不需要提交给服务器，
+// 也即不需要从服务器获取数据，虽然降低了服务器的负载，提高了用户体验，但不能获取最新的数据。为了保证读取的信息都是最新的，
+// 需要禁止其缓存功能。
+
+
+
+// 解决方案有如下几种：
+
+// 　在Ajax发送请求前加上anyAjaxObj.setRequestHeader("If-Modified-Since", "0")。
+
+// 　在Ajax发送请求前加上anyAjaxObj.setRequestHeader("Cache-Control", "no-cache")。
+
+// 　在URL后加上一个随机数："fresh=" + Math.random();。
+
+// 　在URL后加上时间搓："nowtime=" + new Date().getTime();。
+
+// 　如果是使用jQuery，则用$.ajaxSetup({cache:false})。这样页面的所有Ajax都会执行该语句而不需要保存缓存记录。
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var sayHi = function(){}
+sayHi();
+    //自执行函数
+    // 创建了一个匿名函数 并且调用他
+    // 不想声明变量
+    // 想要有 一个独立的作用域
+    (function(){})()
+
+    /*
+    闭包 
+    函数中的函数
+    作用:保护某一些变量 对外提供有限的访问权限
+    特点:延长变量的生命周期 有可能造成内存泄漏(老版本的IE function out(){
+        let num =10;
+        // 想要对
+        让外部也可以访问
+        return {
+            inner(){
+                console.log(num);
+
+            },
+            add(){
+                num++;
+            },
+            sub(){
+                num--;
+            }
+        }
+    }
+    let sayNum =out();
+    */ 
+</script>
